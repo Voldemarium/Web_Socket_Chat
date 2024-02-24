@@ -1,0 +1,36 @@
+ws://localhost:8080/websocket/chat
+
+1) Запросы на присоединение пользователей
+{"type":"USER_JOINED",
+ "payload":
+   {
+    "user":{"alias":"first_User", "avatar":"noooo"},
+    "properties":{"some":"fffqfwqf"}
+    }
+}
+
+{"type":"USER_JOINED",
+ "payload":
+   {
+    "user":{"alias":"second_User", "avatar":"noooo"},
+    "properties":{"some":"fffqfwqf"}
+    }
+}
+
+2) Сообщения в чате:
+{"type":"CHAT_MESSAGE",
+ "payload":
+   {
+    "user":{"alias":"first_User", "avatar":"noooo"},
+    "properties":{"some":"first-user message 1"}
+    }
+}
+
+{"type":"CHAT_MESSAGE",
+ "payload":
+   {
+    "user":{"alias":"second_User", "avatar":"noooo"},
+    "properties":{"some":"second-user message 1"}
+    }
+}
+
